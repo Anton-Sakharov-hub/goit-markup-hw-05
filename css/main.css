@@ -92,7 +92,6 @@ img {
 
 /* Шапка */
 .header {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
@@ -186,7 +185,6 @@ img {
 /* Герой */
 
 .hero-scn {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
@@ -234,7 +232,6 @@ img {
 /* Секция преимущества */
 
 .advantages {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
@@ -300,7 +297,6 @@ img {
 /* Секция занятий */
 
 .occupations {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
@@ -336,7 +332,6 @@ img {
 /* Наша команда */
 
 .our-team {
-  width: 1600px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 94px;
@@ -402,7 +397,6 @@ svg:focus {
 /* Секция постоянные клиенты */
 
 .clients {
-  width: 1600px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 94px;
@@ -427,6 +421,17 @@ svg:focus {
   border: 1px solid var(--accent-color);
 }
 
+.client-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
 /* .clients-list {
   justify-content: center;
 } */
@@ -434,7 +439,6 @@ svg:focus {
 /* --------------- Подвал ----------------------*/
 
 .footer {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 56px;
@@ -563,7 +567,6 @@ svg:focus {
 /* Портфолио */
 
 .main {
-  width: 1600px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 93px;
