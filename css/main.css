@@ -403,6 +403,18 @@ svg:focus {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
 }
+
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-list svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
 /* Подвал */
 
