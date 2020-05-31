@@ -61,7 +61,6 @@ img {
 
 /* Утилитарный класс оснавной контейнер */
 .container {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -239,7 +238,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
-  /* padding-bottom: 94px; */
 
   background-color: var(--main-white-color);
 }
@@ -271,6 +269,24 @@ img {
 
 .advant-items > .item + .item {
   margin-left: 30px;
+}
+
+.advant-items > .item::before {
+  content: "";
+  background-image: url(/images-web-studio/icons/antenna.svg);
+  width: 278px;
+  height: 117px;
+  position: center;
+  background-size: cover;
+}
+
+.test {
+  content: "";
+  background-image: url(/images-web-studio/icons/antenna.svg);
+  width: 278px;
+  height: 117px;
+  position: center;
+  background-size: cover;
 }
 
 .item > .icon {
@@ -405,19 +421,17 @@ svg:focus {
   fill: var(--main-icon-color);
 }
 
-.clients-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.clients-list svg:hover,
+svg:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
-.clients-list svg {
-  display: flex;
-  align-items: center;
+/* .clients-list {
   justify-content: center;
-}
+} */
 
-/* Подвал */
+/* --------------- Подвал ----------------------*/
 
 .footer {
   width: 1600px;
