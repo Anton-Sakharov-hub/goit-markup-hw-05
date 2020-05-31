@@ -18,8 +18,8 @@
   --footer-bgc-color: #2f303a;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --footer-copyright-color: rgba(255, 255, 255, 0.4);
-  --main-icon-color: #AFB1B8
-  --footer-bg-icon-color: rgba(255, 255, 255, 0.1)
+  --main-icon-color: #afb1b8;
+  --footer-bg-icon-color: rgba(255, 255, 255, 0.1);
 }
 
 html {
@@ -400,8 +400,9 @@ svg:focus {
 }
 
 .clients svg {
-  border: 1px solid #AFB1B8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: var(--main-icon-color);
 }
 
 .clients-list {
@@ -415,7 +416,7 @@ svg:focus {
   align-items: center;
   justify-content: center;
 }
-  
+
 /* Подвал */
 
 .footer {
@@ -515,7 +516,7 @@ svg:focus {
 .footer-social-networks svg {
   border-radius: 100%;
   fill: var(--main-white-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-bg-icon-color);
 }
 
 .footer-social-networks svg:hover,
