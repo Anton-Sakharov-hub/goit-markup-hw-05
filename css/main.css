@@ -189,12 +189,17 @@ img {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-
-  background-color: grey;
-}
-
-.hero {
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images-web-studio/hero-bgi.jpg);
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -240,6 +245,8 @@ img {
 }
 
 .advantages-title {
+  display: inline-flex;
+  flex-direction: column;
   margin-top: 30px;
   margin-bottom: 10px;
 
@@ -268,33 +275,56 @@ img {
   margin-left: 30px;
 }
 
-.advant-items > .item::before {
+.advant-items > .item:nth-child(1)::before {
   content: "";
-  background-image: url(/images-web-studio/icons/antenna.svg);
+  display: inline-flex;
+  border-radius: 4px;
   width: 278px;
   height: 117px;
-  position: center;
-  background-size: cover;
-}
 
-.test {
+  background-image: url(../images-web-studio/icons/antenna.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--secondary-bcg-color);
+}
+.advant-items > .item:nth-child(2)::before {
   content: "";
-  background-image: url(/images-web-studio/icons/antenna.svg);
+  display: inline-flex;
+  border-radius: 4px;
   width: 278px;
   height: 117px;
-  position: center;
-  background-size: cover;
+
+  background-image: url(../images-web-studio/icons/clock.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--secondary-bcg-color);
 }
+.advant-items > .item:nth-child(3)::before {
+  content: "";
+  display: inline-flex;
+  border-radius: 4px;
+  width: 278px;
+  height: 117px;
 
-.item > .icon {
-  display: inline-block;
-  width: 270px;
-  height: 120px;
+  background-image: url(../images-web-studio/icons/diagram.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--secondary-bcg-color);
+}
+.advant-items > .item:nth-child(4)::before {
+  content: "";
+  display: inline-flex;
+  border-radius: 4px;
+  width: 278px;
+  height: 117px;
 
+  background-image: url(../images-web-studio/icons/astronaut.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: var(--secondary-bcg-color);
 }
 
-/* Секция занятий */
+/*------------------------------------------ Секция занятий -------------------------------------------------*/
 
 .occupations {
   margin-left: auto;
@@ -367,6 +397,8 @@ img {
   text-align: center;
 
   background-color: var(--main-white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .item-cards > .item + .item {
@@ -383,8 +415,7 @@ img {
 }
 
 .social-networks svg {
-  border: 1px solid black;
-  border-radius: 100%;
+  border-radius: 25px;
   fill: var(--main-icon-color);
 }
 
@@ -394,7 +425,7 @@ svg:focus {
   background-color: var(--accent-color);
 }
 
-/* Секция постоянные клиенты */
+/* ----------------------- Секция постоянные клиенты ------------------------------------------*/
 
 .clients {
   margin-right: auto;
@@ -405,36 +436,32 @@ svg:focus {
   background-color: var(--main-white-color);
 }
 
-.clients .item.item:not(:first-child) {
+.client-item:not(:first-child) {
   margin-left: 30px;
 }
 
-.clients svg {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
+.client-item {
+  width: 170px;
+  height: 90px;
   fill: var(--main-icon-color);
+  border: 1px solid var(--main-icon-color);
+  border-radius: 4px;
 }
 
-.clients-list svg:hover,
-svg:focus {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-}
-
-.client-1 {
+.client-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
-  height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  fill: #afb1b8;
+  width: 100%;
+  height: 100%;
+  fill: inherit;
 }
 
-/* .clients-list {
-  justify-content: center;
-} */
+.client-item:hover,
+.client-item:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 
 /* --------------- Подвал ----------------------*/
 
@@ -442,8 +469,6 @@ svg:focus {
   margin-left: auto;
   margin-right: auto;
   padding-top: 56px;
-  padding-right: 200px;
-  padding-left: 200px;
 
   background-color: var(--footer-bgc-color);
 }
@@ -553,15 +578,18 @@ svg:focus {
 }
 
 .copyrights-container {
-  display: inline-block;
-  margin: 0px;
+  margin-right: auto;
+  margin-left: auto;
   width: 1200px;
   padding-top: 18px;
   padding-bottom: 21px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-
   color: var(--footer-copyright-color);
+}
+
+.copyrights {
+  margin: 0px;
 }
 
 /* Портфолио */
