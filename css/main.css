@@ -611,10 +611,25 @@ svg:focus {
   color: #ffffff;
 }
 
-.mailling-cntr .button {
+.mailling-button {
   display: flex;
   align-items: center;
   margin-top: 10px;
+  min-width: 210px;
+  height: 50px;
+  padding: 10px 32px;
+  border-radius: 4px;
+
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  overflow: hidden;
 }
 
 .icon-send {
