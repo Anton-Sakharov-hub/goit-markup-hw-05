@@ -611,6 +611,16 @@ svg:focus {
   color: #ffffff;
 }
 
+.mailling-cntr .button {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+
 .copyrights-container {
   margin-right: auto;
   margin-left: auto;
