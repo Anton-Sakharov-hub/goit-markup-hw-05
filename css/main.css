@@ -733,27 +733,34 @@ svg:focus {
 
 .content-img {
   position: relative;
+  overflow: hidden;
 }
 
 .content-img::after {
-  position: absolute;
-  top: 0;
   content: "";
+  position: absolute;
+  bottom: 0;
+  padding: 0 24px;
   display: block;
   width: 370px;
   height: 294px;
+  transform: translateY(100%);
 
-  opacity: 0;
+  opacity: 0.9;
   background-color: var(--accent-color);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .description {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(150%);
   margin: 0;
   padding: 24px;
-  opacity: 0;
+  opacity: 0.9;
   z-index: 2;
 
   font-weight: 400;
@@ -762,13 +769,20 @@ svg:focus {
   letter-spacing: 0.03em;
 
   color: var(--main-white-color);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wrap .item:hover .content-img::after,
-.item:focus .content-img::after,
-.item:hover .description,
+.item:focus .content-img::after {
+  transform: translate(0);
+}
+
+.wrap .item:hover .description,
 .item:focus .description {
-  opacity: 0.9;
+  transform: translateY(-50%);
 }
 
 .filter {
